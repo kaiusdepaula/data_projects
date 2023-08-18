@@ -16,6 +16,30 @@ def bubble_sort_modified(x):
             iterations.append(list(x))
     return iterations
 
+def insertion_sort_modified(x):
+    iterations = []
+    i = 1
+    while i < len(x):
+        j = i
+        while j > 0 and x[j-1] > x[j]:
+            x[j], x[j - 1] = x[j - 1], x[j]
+            j -= 1
+        iterations.append(list(x))
+        i += 1
+
+    return iterations
+
+def selection_sort_modified(x):
+    iterations = []
+    for i in range(len(x)):
+        min_value = i
+        for j in range(i +1, len(x)):
+            if x[j] < x[min_value]:
+                min_value = j
+        if min_value != i:
+            x[i], x[min_value] = x[min_value], x[i]
+            iterations.append(list(x))
+    return iterations
 
 def sorting_animation(x, func):
     iterations = func(x)
@@ -38,4 +62,4 @@ def sorting_animation(x, func):
     return(plt.show())
 
 
-sorting_animation(values, bubble_sort_modified)
+sorting_animation(values, selection_sort_modified)
