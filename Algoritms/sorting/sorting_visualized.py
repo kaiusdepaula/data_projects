@@ -41,6 +41,45 @@ def selection_sort_modified(x):
             iterations.append(list(x))
     return iterations
 
+def merge_sort_modified(x):
+    iterations = []
+    if len(x) > 1:
+        # Get mid of array
+        mid = len(x) // 2
+
+        # Get left side
+        left = x[:mid]
+
+        # Get right side
+        right = x[mid:]
+
+        # Recursive use on left and right
+        merge_sort_modified(left)
+        merge_sort_modified(right)
+
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                x[k] = left[i]
+                i += 1
+            else:
+                x[k] = right[j]
+                j += 1
+            k += 1
+
+        # Check if there is any left element
+        while i < len(left):
+            x[k] = left[i]
+            i += 1
+            k += 1
+        
+        while j < len(right):
+            x[k] = right[j]
+            j += 1
+            k += 1
+        
+        return x
+
 def sorting_animation(x, func):
     iterations = func(x)
 
@@ -60,6 +99,5 @@ def sorting_animation(x, func):
     )
 
     return(plt.show())
-
 
 sorting_animation(values, selection_sort_modified)
