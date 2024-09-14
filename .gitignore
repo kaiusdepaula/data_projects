@@ -50,3 +50,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Manim media folder
+Manim/media/
+
+# Pychache
+*__pycache__
