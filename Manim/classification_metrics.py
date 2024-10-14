@@ -1,6 +1,37 @@
 from manim import *
 from random import seed, randint
 
+class Hello(Scene):
+    def construct(self):
+        # Title text
+        title = Text("Hi there!", font_size=70, color=WHITE, weight=BOLD)
+        title.shift(UP*2)
+
+        # Subtitle text
+        subtitle = Text("Lets review Accuracy, Precision, Recall, F1 Score", font_size=40, color=WHITE)
+        subtitle.shift(UP*0.5)
+
+        # Add elements to scene with animations
+        self.play(Write(subtitle), Write(title))
+        self.wait()
+        self.play(Unwrite(subtitle), Unwrite(title))
+
+class Bye(Scene):
+    def construct(self):
+        # Title text
+        title = Text("Thank you for watching!", font_size=70, color=WHITE, weight=BOLD)
+        title.shift(UP*2)
+
+        # Subtitle text
+        subtitle = Text("Like and share!", font_size=40, color=WHITE)
+        subtitle.shift(UP*0.5)
+
+        # Add elements to scene with animations
+        self.play(Write(subtitle), Write(title))
+        self.wait()
+        self.play(Unwrite(subtitle), Unwrite(title))
+
+
 seed(42)
 class Intro(Scene):
     def acting_classifier(self, triangle, n_dots, speed):        
@@ -403,4 +434,3 @@ class Intro(Scene):
         # Clean up
         self.play(FadeOut(Group(*self.mobjects)))
         self.wait(2)
-
