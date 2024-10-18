@@ -47,6 +47,7 @@ class ShortVideo(Scene):
                     speed = 0.2
         
     def construct(self):
+        self.camera.background_color = "#1c1c1c"
         def label_updater(obj):
             obj.next_to(square, UP, buff=0.5)
 

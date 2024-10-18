@@ -3,6 +3,7 @@ from random import seed, randint
 
 class Hello(Scene):
     def construct(self):
+        self.camera.background_color = "#1c1c1c"
         # Title text
         title = Text("Hi there!", font_size=70, color=WHITE, weight=BOLD)
         title.shift(UP*2)
@@ -18,6 +19,7 @@ class Hello(Scene):
 
 class Bye(Scene):
     def construct(self):
+        self.camera.background_color = "#1c1c1c"
         # Title text
         title = Text("Thank you for watching!", font_size=70, color=WHITE, weight=BOLD)
         title.shift(UP*2)
@@ -102,6 +104,7 @@ class Intro(Scene):
                     speed = 0.15
         
     def construct(self):
+        self.camera.background_color = "#1c1c1c"
         def label_updater(obj):
             obj.next_to(square, UP, buff=0.5)
 

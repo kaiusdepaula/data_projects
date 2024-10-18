@@ -28,7 +28,7 @@ class LinkedInBanner(Scene):
         area = axes.get_area(
             bell_curve,
             x_range=(-4,4),
-            color=(BLUE_D, BLUE_D),
+            color=(BLUE_E, BLUE_E),
             opacity=0.3,
         )
 
@@ -55,7 +55,7 @@ class LinkedInBanner(Scene):
             vertex_dot_radius=0.03
         )
 
-        funny_func = MathTex(r"Content_t = f(x) + o(y) + l(z) + l(w) + o(p) + w(q)", font_size=38, color=WHITE).scale(0.3).shift(LEFT*2.9 + UP).set_opacity(0.8)
+        funny_func = MathTex(r"Content_t = f(x) + o(y) + l(z) + l(w) + o(p) + w(q)", font_size=38, color=WHITE).scale(0.4).shift(LEFT*2.9 + UP).set_opacity(0.8)
 
         edges = []
         partitions = []
