@@ -7,10 +7,10 @@ class LinkedInBanner(Scene):
         self.camera.background_color = "#1c1c1c"
         
         phrase1 = Text("I Build AI Applications", font_size=40, color=WHITE).shift(RIGHT*3 + UP*0.2).set_opacity(0.8)
-        phrase2 = Text(r"Like There’s Nothing Artificial About It", font_size=25, color=BLUE_D).set_opacity(0.8)
+        phrase2 = Text(r"And There’s Nothing Artificial About It", font_size=25, color=BLUE_D).set_opacity(0.8)
         phrase2.next_to(phrase1, DOWN * 0.3)
 
-        call_to_action = Text("Follow Along for More!", font_size=30, color=WHITE).shift(LEFT * 5.5 + UP * 1.4).set_opacity(0.8).scale(0.5)
+        call_to_action = Text("Follow for More!", font_size=30, color=WHITE).shift(LEFT * 5.5 + UP * 1.4).set_opacity(0.8).scale(0.6)
         plus_sign = MathTex("-", color=BLUE_D).next_to(call_to_action, LEFT, buff=0.1)
         
         # Create a bell curve (Gaussian function) with opacity
@@ -29,7 +29,7 @@ class LinkedInBanner(Scene):
             opacity=0.3,
         )
 
-        funny_func = Text("So you can base your decisions on actual evidence.", font_size=30, color=WHITE).scale(0.5).align_on_border(RIGHT).set_opacity(0.8).shift(DOWN * 1.3)
+        funny_func = Text("So you can base your decisions on actual evidence.", font_size=28, color=WHITE).scale(0.6).align_on_border(RIGHT).set_opacity(0.8).shift(DOWN * 1.3)
 
         # Add all elements to the scene
         self.add(
